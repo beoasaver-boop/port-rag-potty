@@ -1,0 +1,15 @@
+# RAG portable · dependencias Python
+#
+# Instalar con:
+#   pip install -r rag/requirements.txt
+#
+# VERSIONES FIJADAS A PROPÓSITO. El contenedor arranca con
+#   bash -c "pip install --quiet --no-cache-dir -r rag/requirements.txt && python -m rag.server"
+# así que un requisito flotante puede cambiar bajo tus pies entre reinicios
+# (chromadb trae código nativo: hnswlib/sqlite). Si actualizas una versión:
+# reinicia, reindexa y comprueba que `drift == 0` en /stats.
+fastapi==0.141.1
+uvicorn[standard]==0.53.0
+pydantic==2.13.5
+chromadb==1.5.9
+httpx==0.28.1
